@@ -8,7 +8,7 @@
           icon    => Feather Icon component/icon name
           tag     => text to display on badge
           tagColor  => class to apply on badge element
-          i18n    => Internationalization
+          i18n    => Internationalization 메뉴언어 글로벌화 
           submenu   => submenu of current item (current item will become dropdown )
                 NOTE: Submenu don't have any icon(you can add icon if u want to display)
           isDisabled  => disable sidebar item/group
@@ -591,6 +591,13 @@ export default [
         slug: 'table',
         icon: 'GridIcon',
         i18n: 'Table'
+      },
+      {
+        url: '/ui-elements/table2',
+        name: 'Table2',
+        slug: 'table2',
+        icon: 'GridIcon',
+        i18n: 'Table2'
       },
       {
         url: '/ui-elements/ag-grid-table',
