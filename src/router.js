@@ -38,6 +38,7 @@ const router = new Router({
     // =============================================================================
     // MAIN LAYOUT ROUTES
     // =============================================================================
+    // 화면이 좌측 봐 상단 메뉴 구성 본문 으로 나뉘었을때는 Main.vue 로 감
       path: '',
       component: () => import('./layouts/main/Main.vue'),
       children: [
@@ -47,6 +48,15 @@ const router = new Router({
         {
           path: '/',
           redirect: '/dashboard/analytics'
+        },
+        {
+          path: '/dashboard/test',
+          name: 'dashboard-test',
+          component: () => import('./views/pages/Test.vue'),
+          meta: {
+            rule: 'editor',
+            authRequired : true
+          }
         },
         {
           path: '/dashboard/analytics',
@@ -1287,6 +1297,7 @@ const router = new Router({
     // =============================================================================
     // FULL PAGE LAYOUTS
     // =============================================================================
+    // 화면이 전체가 바뀔때는 FullPage로 감
     {
       path: '',
       component: () => import('@/layouts/full-page/FullPage.vue'),
@@ -1307,7 +1318,8 @@ const router = new Router({
           name: 'page-login',
           component: () => import('@/views/pages/login/Login.vue'),
           meta: {
-            rule: 'editor'
+            rule: 'editor',
+            authRequired : false
           }
         },
         {
@@ -1315,7 +1327,8 @@ const router = new Router({
           name: 'page-register',
           component: () => import('@/views/pages/register/Register.vue'),
           meta: {
-            rule: 'editor'
+            rule: 'editor',
+            authRequired : false
           }
         },
         {
@@ -1416,7 +1429,7 @@ router.beforeEach((to, from, next) => {
     //     to.path === "/pages/comingsoon" ||
     //     (auth.isAuthenticated() || firebaseCurrentUser)
     // ) {
-    //     return next();
+    //     return next("/");
     // }
 
     // If auth required, check login. If login fails redirect to login page

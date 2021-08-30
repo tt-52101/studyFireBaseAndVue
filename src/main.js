@@ -7,7 +7,7 @@
   Author URL: http://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
 
-
+//vue 선언
 import Vue from 'vue'
 import App from './App.vue'
 

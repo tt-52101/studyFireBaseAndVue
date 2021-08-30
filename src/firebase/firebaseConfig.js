@@ -5,13 +5,16 @@
 import firebase from 'firebase/app'
 
 // Initialize Firebase
-const config = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  databaseURL: 'YOUR_DATA_URL',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_STORAGE_BUCKET',
-  messagingSenderId: 'YOUR_MESSAGING_ID'
-}
+var firebaseConfig = {
+  apiKey: "AIzaSyCsRwMQizK_VkJ2e4QPg5vLI1oUvZ0KNVg",
+  authDomain: "studyfirebaseandvue.firebaseapp.com",
+  projectId: "studyfirebaseandvue",
+  storageBucket: "studyfirebaseandvue.appspot.com",
+  messagingSenderId: "780599548003",
+  appId: "1:780599548003:web:c57302277c3729c20fc056",
+  measurementId: "G-J6TBHEW68Y"
+};
 
-firebase.initializeApp(config)
+// Initialize Firebase
+//const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig)
