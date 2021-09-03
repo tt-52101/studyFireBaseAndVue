@@ -12,11 +12,14 @@
   <div>
     <vx-card title="테이블 테스트">
       <a-table :columns="columns" :data-source="data">
-        <template slot="operation" slot-scope="record">
-          <button @click="() => edit(record)">선택</button>
+        <template slot="img" slot-scope="record">
+          <img v-if="record.img" :src= "record.img" style="width:50px;height:50px"/>
           <!-- <a :disabled="editingKey !== ''" @click="() => edit(record.key)"
                 >Edit</a
               > -->
+        </template>
+        <template slot="operation" slot-scope="record">
+          <button @click="() => edit(record)">선택</button>
         </template>
       </a-table>
     </vx-card>
@@ -94,8 +97,8 @@ export default {
         },
         {
           title: "img",
-          dataIndex: "img",
           key: "img",
+           scopedSlots: { customRender: "img" }, 
         },
         {
           title: "action",
@@ -207,6 +210,7 @@ export default {
       this.age = r.age;
       this.address = r.address;
       this.key = r.key;
+      this.img = r.img;
     },
     onInitData() {
       this.key = "";
@@ -279,6 +283,7 @@ export default {
             name: self.name,
             age: self.age,
             address: self.address,
+            img : self.img,
           })
           .then(function (mRef) {
             var _t = {
@@ -286,6 +291,7 @@ export default {
               name: self.name,
               age: self.age,
               address: self.address,
+              img : self.img,
             };
 
             _t["key"] = mRef.id;
