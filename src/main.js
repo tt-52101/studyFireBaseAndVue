@@ -17,6 +17,11 @@ import 'material-icons/iconfont/material-icons.css' //Material Icons
 import 'vuesax/dist/vuesax.css' // Vuesax
 Vue.use(Vuesax)
 
+import "./registerServiceWorker";
+
+
+
+
 import Antd from 'ant-design-vue';
 // import App from './App';
 import 'ant-design-vue/dist/antd.css';
