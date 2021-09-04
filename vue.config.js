@@ -21,7 +21,17 @@ module.exports = {
         chunks: 'all'
       }
     }
-  }
+  },
+  pwa: {
+    name: "tes",
+    themeColor: "#66615B",
+    msTileColor: "#66615B",
+    appleMobileWebAppCapable: "yes",
+    appleMobileWebAppStatusBarStyle: "#66615B",
+    workboxOptions: {
+    skipWaiting: true
+    }
+    },
   // devServer: {
   //   overlay: {
   //     warnings: true,
