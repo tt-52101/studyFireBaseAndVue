@@ -19,7 +19,9 @@ Vue.use(Vuesax)
 
 import "./registerServiceWorker";
 
-
+import VueCookies from 'vue-cookies';
+Vue.use(VueCookies);
+Vue.prototype.$cookie = VueCookies
 
 
 import Antd from 'ant-design-vue';
