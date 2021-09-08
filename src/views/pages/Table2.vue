@@ -92,7 +92,7 @@ import UploadExcelComponent from "../components/UploadExcel/index.vue";
 import XLSX from "xlsx";
 import FileSaver from "file-saver";
 
-import VLazyImage from "v-lazy-image";
+ import VLazyImage from "v-lazy-image";
 
 export default {
   data() {
